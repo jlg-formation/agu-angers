@@ -12,6 +12,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+[routerLink] {
+  cursor: pointer;
+}
+
 button {
     cursor: pointer;
     border: none;
