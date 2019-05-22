@@ -1,24 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'normalize.css';
 
+@import './scss/variables';
+
 html,
 body {
     height: 100%;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 button {
     cursor: pointer;
     border: none;
-    background: #ddd;
+    background: $background-color;
     padding: 0.5em 1em;
     margin-left: 0.5em;
     margin-right: 0.5em;
 
     &:hover {
-        background: #ccc;
+        background: darken($background-color, 10);
+    }
+    &:active {
+        background: darken($background-color, 15);
     }
     &[disabled] {
         cursor: default;
-        background: #eee;
+        background: lighten($background-color, 5);
     }
 }
