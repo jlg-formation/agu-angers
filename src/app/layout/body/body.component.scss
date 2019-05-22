@@ -3,18 +3,5 @@
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
-}
-
-button {
-    font-size: 1.5em;
-    width: 8em;
-    height: 8em;
-
-    @media only screen and (max-width: 500px) {
-        font-size: 1em;
-    }
 }
