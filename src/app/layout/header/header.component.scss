@@ -2,6 +2,7 @@ header {
     display: flex;
     align-items: center;
     height: 3rem;
+    flex-grow: 0;
     padding-left: 0.3em;
     background: #ddd;
     font-size: 2em;
