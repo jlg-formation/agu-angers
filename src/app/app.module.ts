@@ -1,14 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-import { HomeComponent } from './routes/home/home.component';
-import { CreateComponent } from './routes/create/create.component';
-import { QuestionsComponent } from './routes/questions/questions.component';
 import { AddQuestionComponent } from './routes/add-question/add-question.component';
+import { CreateComponent } from './routes/create/create.component';
+import { HomeComponent } from './routes/home/home.component';
+import { QuestionsComponent } from './routes/questions/questions.component';
 import { SavedComponent } from './routes/saved/saved.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { SavedComponent } from './routes/saved/saved.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
