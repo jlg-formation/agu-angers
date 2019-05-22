@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -8,16 +9,18 @@ import { FormGroup } from '@angular/forms';
 })
 export class CreateComponent implements OnInit {
 
-  f = new FormGroup({});
+  f = new FormGroup({
+    name: new FormControl('', Validators.required)
+  });
 
-  constructor() { }
+  constructor(private router: Router) {  }
 
   ngOnInit() {
   }
 
   submit() {
     console.log('submit');
-    return true;
+    this.router.navigateByUrl('/questions');
   }
 
 }

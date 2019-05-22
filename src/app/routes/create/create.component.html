@@ -2,7 +2,7 @@
 
   <label>
     <div>Nom du Quizz*</div>
-    <input type="text">
+    <input type="text" formControlName="name">
   </label>
-  <button>Suivant</button>
+  <button [disabled]="f.invalid">Suivant</button>
 </form>
