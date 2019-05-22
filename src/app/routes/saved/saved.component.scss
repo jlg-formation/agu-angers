@@ -1,3 +1,32 @@
 fa-icon {
   font-size: 10em;
 }
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .big {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .buttons {
+      display: flex;
+      padding-top: 1em;
+      justify-content: space-between;
+  }
+
+  button {
+      margin:0;
+  }
+}
