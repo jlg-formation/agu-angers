@@ -1,0 +1,39 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .help {
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    .answers {
+        display: flex;
+        align-items: stretch;
+        .inputs {
+            width: 88%;
+        }
+        .radios {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 12%;
+        }
+    }
+
+    // .text {
+    //     text-align: center;
+    // }
+
+    .buttons {
+        display: flex;
+        padding-top: 1em;
+        justify-content: space-between;
+    }
+
+    button {
+        margin:0;
+    }
+}

@@ -1,23 +1,28 @@
-<form [formGroup]="f" (ngSubmit)="submit()">
+<form class="max-width" [formGroup]="f" (ngSubmit)="submit()">
 
   <label>
     <div>Texte de la question*</div>
     <textarea rows="3" formControlName="label"></textarea>
   </label>
-  <div>
-    <div>
+  <div>Réponses possibles*</div>
+
+  <div class="answers">
+    <div class="inputs">
       <input type="text">
       <input type="text">
       <input type="text">
       <input type="text">
     </div>
-    <div>
+    <div class="radios">
       <input type="radio">
       <input type="radio">
       <input type="radio">
       <input type="radio">
     </div>
   </div>
-  <button type="button" routerLink="/questions">Annuler</button>
-  <button [disabled]="f.invalid">Ajouter la question</button>
+  <div class="help">Cocher la bonne réponse</div>
+  <div class="buttons">
+    <button type="button" routerLink="/questions">Annuler</button>
+    <button [disabled]="f.invalid">Ajouter la question</button>
+  </div>
 </form>
