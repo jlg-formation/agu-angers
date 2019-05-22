@@ -1,8 +1,10 @@
-<form [formGroup]="f" (ngSubmit)="submit()">
+<form class="max-width" [formGroup]="f" (ngSubmit)="submit()">
 
   <label>
     <div>Nom du Quizz*</div>
-    <input type="text" formControlName="name">
+    <input type="text" formControlName="name" placeholder="Ex: toto">
   </label>
-  <button [disabled]="f.invalid">Suivant</button>
+  <div class="buttons">
+    <button [disabled]="f.invalid">Suivant</button>
+  </div>
 </form>
