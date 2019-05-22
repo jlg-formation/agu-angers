@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionsComponent implements OnInit {
 
+  name = 'toto';
+  nbr = 0;
+
   constructor() { }
 
   ngOnInit() {
