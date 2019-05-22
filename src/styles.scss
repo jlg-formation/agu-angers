@@ -1,14 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'normalize.css';
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
 button {
+    cursor: pointer;
     border: none;
     background: #ddd;
     padding: 0.5em 1em;
     margin-left: 0.5em;
     margin-right: 0.5em;
+
+    &:hover {
+        background: #ccc;
+    }
+    &[disabled] {
+        cursor: default;
+        background: #eee;
+    }
 }
