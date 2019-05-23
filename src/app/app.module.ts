@@ -12,6 +12,7 @@ import { HomeComponent } from './routes/home/home.component';
 import { QuestionsComponent } from './routes/questions/questions.component';
 import { SavedComponent } from './routes/saved/saved.component';
 import { PlayQuizzModule } from './play-quizz/play-quizz.module';
+import { NotFoundModule } from './not-found/not-found.module';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { PlayQuizzModule } from './play-quizz/play-quizz.module';
     CreateComponent,
     QuestionsComponent,
     AddQuestionComponent,
-    SavedComponent
+    SavedComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import { PlayQuizzModule } from './play-quizz/play-quizz.module';
     AppRoutingModule,
     LayoutModule,
     ReactiveFormsModule,
-    PlayQuizzModule
+    PlayQuizzModule,
+    NotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]

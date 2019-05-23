@@ -1,1 +1,1 @@
-<button *ngFor="let q of quizz.getArray()">{{q.name}}</button>
+<button *ngFor="let q of quizz.getArray()" [routerLink]="'/' + q.name + '/start'">{{q.name}}</button>
