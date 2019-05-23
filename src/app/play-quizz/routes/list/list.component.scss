@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+button {
+    font-size: 1.5em;
+    width: 8em;
+    height: 8em;
+    margin: 1em;
+
+    @media only screen and (max-width: 500px) {
+        font-size: 1em;
+    }
+}
