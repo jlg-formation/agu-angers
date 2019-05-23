@@ -55,6 +55,10 @@ export class QuizzService {
     localStorage.setItem(QUIZZ_LIST, JSON.stringify(this.list));
   }
 
+  hasAtLeastOneQuizz() {
+    return Object.keys(this.list).length > 0;
+  }
+
 
 
 
