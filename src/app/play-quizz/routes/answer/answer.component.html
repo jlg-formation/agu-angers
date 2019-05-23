@@ -2,4 +2,13 @@
   <h1>Quizz {{quizz.currentQuizz.name}}</h1>
   <h2>Question {{questionId}}</h2>
   <h3>Score : {{quizz.progress.score}} / {{quizz.currentQuizz.questions.length}}</h3>
+  <p>{{quizz.currentQuizz.questions[questionId - 1].label}}</p>
+  <form [formGroup]="f" class="answers" (ngSubmit)="submit()">
+    <label *ngFor="let letter of ['A', 'B', 'C', 'D']">
+      <input type="radio" formControlName="answer"
+        [value]="letter"><span>{{quizz.currentQuizz.questions[questionId - 1]['answer' + letter]}}</span>
+    </label>
+
+    <button [disabled]="f.invalid">Valider</button>
+  </form>
 </div>
