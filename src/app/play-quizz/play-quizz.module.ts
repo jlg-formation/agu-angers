@@ -7,12 +7,14 @@ import { StartComponent } from './routes/start/start.component';
 import { AnswerComponent } from './routes/answer/answer.component';
 import { ScoreComponent } from './routes/score/score.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [ListComponent, StartComponent, AnswerComponent, ScoreComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     PlayQuizzRoutingModule
   ]
 })
