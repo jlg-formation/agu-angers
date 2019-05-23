@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { QuizzService } from 'src/app/quizz.service';
 
 @Component({
@@ -8,9 +8,10 @@ import { QuizzService } from 'src/app/quizz.service';
 })
 export class QuestionsComponent implements OnInit {
 
-  constructor(public quizz: QuizzService) { }
+  constructor(public quizz: QuizzService, private elt: ElementRef) { }
 
   ngOnInit() {
+    this.elt.nativeElement.querySelector('button').focus();
   }
 
 }

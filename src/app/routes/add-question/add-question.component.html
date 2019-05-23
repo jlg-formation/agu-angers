@@ -1,5 +1,7 @@
 <form class="max-width" [formGroup]="f" (ngSubmit)="submit()">
 
+  <div class="center">Quizz: {{quizz.currentQuizz.name}}</div>
+  <div class="center">Question {{quizz.currentQuizz.questions.length + 1}}</div>
   <label>
     <div>Texte de la question*</div>
     <textarea rows="3" formControlName="label"></textarea>
