@@ -13,7 +13,11 @@ body {
 }
 
 body {
+    font-size: 1.5vw;
     font-family: 'Roboto', sans-serif;
+    @media only screen and (max-width: 500px) {
+        font-size: 1em;
+    }
 }
 
 [routerLink] {

@@ -1,11 +1,13 @@
 header {
     display: flex;
     align-items: center;
-    height: 3rem;
+    height: 4em;
     flex-grow: 0;
     padding-left: 0.3em;
     background: #ddd;
-    font-size: 2em;
+    .logo {
+        font-size: 2em;
+    }
 }
 
 img {
