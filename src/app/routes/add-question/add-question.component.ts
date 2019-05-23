@@ -27,6 +27,7 @@ export class AddQuestionComponent implements OnInit {
   submit() {
     console.log('submit');
     this.quizz.currentQuizz.questions.push(this.f.value);
+    this.quizz.saveLocal();
     this.router.navigateByUrl('/questions');
   }
 

@@ -3,7 +3,7 @@
   <div class="text">Nombre de questions : <b>{{quizz.currentQuizz.questions.length}}</b></div>
   <div class="buttons">
     <button routerLink="/add-question" class="primary">Ajouter une question</button>
-    <button routerLink="/saved" *ngIf="quizz.currentQuizz.questions.length > 0">Sauver le quizz</button>
+    <button (click)="save()" *ngIf="quizz.currentQuizz.questions.length > 0">Sauver le quizz</button>
   </div>
 
 </div>
