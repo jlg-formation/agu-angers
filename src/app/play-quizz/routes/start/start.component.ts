@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuizzService } from 'src/app/quizz.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { QuizzProgress } from 'src/app/quizz-progress';
 
 
 @Component({
@@ -26,6 +27,11 @@ export class StartComponent implements OnInit {
       }
       this.quizz.currentQuizz = quizz;
     });
+  }
+
+  start() {
+    this.quizz.progress = new QuizzProgress();
+    this.router.navigate(['/', this.quizz.currentQuizz.name, 'answer', 1]);
   }
 
 }

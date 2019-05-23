@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Quizz } from './quizz';
+import { QuizzProgress } from './quizz-progress';
 
 const CURRENT = 'current';
 const QUIZZ_LIST = 'quizz-list';
@@ -8,11 +9,10 @@ const QUIZZ_LIST = 'quizz-list';
   providedIn: 'root'
 })
 export class QuizzService {
-  
-
 
   currentQuizz: Quizz;
   list: any;
+  progress: QuizzProgress;
 
   constructor() {
     this.retrieveLocal();
