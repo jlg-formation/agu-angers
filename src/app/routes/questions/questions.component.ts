@@ -8,8 +8,6 @@ import { QuizzService } from 'src/app/quizz.service';
 })
 export class QuestionsComponent implements OnInit {
 
-  nbr = 0;
-
   constructor(public quizz: QuizzService) { }
 
   ngOnInit() {
