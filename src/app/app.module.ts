@@ -11,6 +11,7 @@ import { CreateComponent } from './routes/create/create.component';
 import { HomeComponent } from './routes/home/home.component';
 import { QuestionsComponent } from './routes/questions/questions.component';
 import { SavedComponent } from './routes/saved/saved.component';
+import { PlayQuizzModule } from './play-quizz/play-quizz.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SavedComponent } from './routes/saved/saved.component';
     FontAwesomeModule,
     AppRoutingModule,
     LayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PlayQuizzModule
   ],
   providers: [],
   bootstrap: [AppComponent]
