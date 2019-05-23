@@ -1,6 +1,14 @@
 <div class="max-width">
   <h1>Quizz {{quizz.currentQuizz.name}}</h1>
-  <div><fa-icon [icon]="faSmileWink"></fa-icon></div>
+  <div *ngIf="quizz.progress.score === quizz.currentQuizz.questions.length">
+    <fa-icon [icon]="faSmileBeam"></fa-icon>
+  </div>
+  <div *ngIf="quizz.progress.score < quizz.currentQuizz.questions.length && quizz.progress.score > 0">
+    <fa-icon [icon]="faSmileWink"></fa-icon>
+  </div>
+  <div *ngIf="quizz.progress.score === 0">
+    <fa-icon [icon]="faPoo"></fa-icon>
+  </div>
   <p>Ton score : {{quizz.progress.score}} / {{quizz.currentQuizz.questions.length}}</p>
-  <button [routerLink]="['/']" routerLinkActive="router-link-active" >Retour Accueil</button>
+  <button [routerLink]="['/']" routerLinkActive="router-link-active">Retour Accueil</button>
 </div>
