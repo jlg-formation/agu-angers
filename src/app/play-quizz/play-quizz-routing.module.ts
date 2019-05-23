@@ -8,7 +8,7 @@ import { ScoreComponent } from './routes/score/score.component';
 const routes: Routes = [
   { path: 'list', component: ListComponent },
   { path: ':name/start', component: StartComponent },
-  { path: 'answer', component: AnswerComponent },
+  { path: ':name/answer/:id', component: AnswerComponent },
   { path: 'score', component: ScoreComponent },
 ];
 
