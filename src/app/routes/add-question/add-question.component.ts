@@ -11,7 +11,12 @@ import { QuizzService } from 'src/app/quizz.service';
 export class AddQuestionComponent implements OnInit {
 
   f = new FormGroup({
-    label: new FormControl('Quelle est la capitale de la France ?', Validators.required)
+    label: new FormControl('Quelle est la capitale de la France ?', Validators.required),
+    answerA: new FormControl('Paris', Validators.required),
+    answerB: new FormControl('Berlin', Validators.required),
+    answerC: new FormControl('Rome', Validators.required),
+    answerD: new FormControl('Madrid', Validators.required),
+    goodAnswer: new FormControl('', Validators.required),
   });
 
   constructor(private router: Router, public quizz: QuizzService) { }

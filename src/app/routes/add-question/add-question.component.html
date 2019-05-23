@@ -10,21 +10,21 @@
 
   <div class="answers">
     <div class="inputs">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
+      <input type="text" formControlName="answerA">
+      <input type="text" formControlName="answerB">
+      <input type="text" formControlName="answerC">
+      <input type="text" formControlName="answerD">
     </div>
     <div class="radios">
-      <input type="radio">
-      <input type="radio">
-      <input type="radio">
-      <input type="radio">
+      <input type="radio" formControlName="goodAnswer" value="A">
+      <input type="radio" formControlName="goodAnswer" value="B">
+      <input type="radio" formControlName="goodAnswer" value="C">
+      <input type="radio" formControlName="goodAnswer" value="D">
     </div>
   </div>
   <div class="help">Cocher la bonne réponse</div>
   <div class="buttons">
     <button type="button" routerLink="/questions">Annuler</button>
-    <button [disabled]="f.invalid">Ajouter la question</button>
+    <button [disabled]="f.invalid" class="primary">Ajouter la question</button>
   </div>
 </form>
