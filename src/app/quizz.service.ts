@@ -8,6 +8,7 @@ const QUIZZ_LIST = 'quizz-list';
   providedIn: 'root'
 })
 export class QuizzService {
+  
 
 
   currentQuizz: Quizz;
@@ -61,6 +62,10 @@ export class QuizzService {
 
   getArray(): Quizz[] {
     return Object.values(this.list);
+  }
+
+  retrieve(name: string): Quizz {
+    return this.list[name];
   }
 
 
