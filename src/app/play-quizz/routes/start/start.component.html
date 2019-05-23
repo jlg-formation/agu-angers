@@ -1,3 +1,6 @@
 <div class="max-width">
   <h1>Quizz {{quizz.currentQuizz.name}}</h1>
+  <p>{{quizz.currentQuizz.questions.length}}
+    question{{(quizz.currentQuizz.questions.length === 1) ? '' : 's'}}</p>
+  <button class="primary">Démarrer</button>
 </div>
