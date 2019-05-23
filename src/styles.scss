@@ -47,6 +47,20 @@ button {
         border-color: lighten($background-color, 5);
         background: lighten($background-color, 5);
     }
+
+    &.primary {
+        color: white;
+        background-color: $primary-background-color;
+        border-color: $primary-background-color;
+        &:hover {
+            border-color: lighten($primary-background-color, 10);
+            background: lighten($primary-background-color, 10);
+        }
+        &:active {
+            border-color: lighten($primary-background-color, 15);
+            background: lighten($primary-background-color, 15);
+        }
+    }
 }
 
 label {
