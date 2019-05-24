@@ -1,4 +1,4 @@
-<div class="max-width">
+<div class="max-width" *ngIf="quizz.currentQuizz">
   <h1>Quizz {{quizz.currentQuizz.name}}</h1>
   <h2>Question {{questionId}}</h2>
   <h3>Score : {{quizz.progress.score}} / {{quizz.currentQuizz.questions.length}}</h3>

@@ -1,6 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { BodyComponent } from './layout/body/body.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +12,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, HeaderComponent, BodyComponent, FooterComponent
       ],
     }).compileComponents();
   }));
@@ -30,6 +33,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to quizz!');
+    expect(compiled.querySelector('span').textContent).toContain('Quizz');
   });
 });
