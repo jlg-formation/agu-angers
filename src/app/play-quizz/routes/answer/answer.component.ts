@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizzService } from 'src/app/quizz.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
