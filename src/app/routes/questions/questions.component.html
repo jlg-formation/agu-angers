@@ -1,4 +1,4 @@
-<div class="max-width">
+<div class="max-width" *ngIf="quizz.currentQuizz">
   <div class="text">Quizz: <b>{{quizz.currentQuizz.name}}</b></div>
   <div class="text">Nombre de questions : <b>{{quizz.currentQuizz.questions.length}}</b></div>
   <div class="buttons">

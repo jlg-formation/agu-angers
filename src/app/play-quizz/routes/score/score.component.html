@@ -1,4 +1,4 @@
-<div class="max-width">
+<div class="max-width" *ngIf="quizz.progress">
   <h1>Quizz {{quizz.currentQuizz.name}}</h1>
   <div *ngIf="quizz.progress.score === quizz.currentQuizz.questions.length">
     <fa-icon [icon]="faSmileBeam"></fa-icon>

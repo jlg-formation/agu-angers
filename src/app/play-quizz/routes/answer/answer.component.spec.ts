@@ -4,6 +4,8 @@ import { AnswerComponent } from './answer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
+import { NotFoundComponent } from 'src/app/not-found/routes/not-found/not-found.component';
+import { NotFoundModule } from 'src/app/not-found/not-found.module';
 
 describe('AnswerComponent', () => {
   let component: AnswerComponent;
@@ -14,11 +16,12 @@ describe('AnswerComponent', () => {
       imports: [
         ReactiveFormsModule,
         HttpClientModule,
-        RouterTestingModule,
+        NotFoundModule,
+        RouterTestingModule.withRoutes([{ path: '404', component: NotFoundComponent }])
       ],
-      declarations: [ AnswerComponent ]
+      declarations: [AnswerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

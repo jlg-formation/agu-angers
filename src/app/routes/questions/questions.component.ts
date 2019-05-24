@@ -15,7 +15,11 @@ export class QuestionsComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.elt.nativeElement.querySelector('button').focus();
+    const b = this.elt.nativeElement.querySelector('button');
+    if (!b) {
+      return;
+    }
+    b.focus();
   }
 
   save() {

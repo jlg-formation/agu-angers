@@ -1,4 +1,4 @@
-<div class="max-width">
+<div class="max-width" *ngIf="quizz.currentQuizz">
   <h1>Quizz {{quizz.currentQuizz.name}}</h1>
   <p>{{quizz.currentQuizz.questions.length}}
     question{{(quizz.currentQuizz.questions.length === 1) ? '' : 's'}}</p>

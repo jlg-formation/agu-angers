@@ -1,4 +1,4 @@
-<form class="max-width" [formGroup]="f" (ngSubmit)="submit()">
+<form class="max-width" [formGroup]="f" (ngSubmit)="submit()" *ngIf="quizz.currentQuizz">
 
   <div class="center">Quizz: {{quizz.currentQuizz.name}}</div>
   <div class="center">Question {{quizz.currentQuizz.questions.length + 1}}</div>
