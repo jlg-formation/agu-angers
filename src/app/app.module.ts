@@ -13,7 +13,13 @@ import { QuestionsComponent } from './routes/questions/questions.component';
 import { SavedComponent } from './routes/saved/saved.component';
 import { PlayQuizzModule } from './play-quizz/play-quizz.module';
 import { NotFoundModule } from './not-found/not-found.module';
+import { QuizzService } from './quizz.service';
+import { QuizzWebService } from './quizz-web.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+let factory = (http: HttpClient) => {
+  return new QuizzWebService(http);
+};
 
 @NgModule({
   declarations: [
@@ -26,6 +32,7 @@ import { NotFoundModule } from './not-found/not-found.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FontAwesomeModule,
     AppRoutingModule,
     LayoutModule,
@@ -33,7 +40,9 @@ import { NotFoundModule } from './not-found/not-found.module';
     PlayQuizzModule,
     NotFoundModule
   ],
-  providers: [],
+  providers: [
+
+    { provide: QuizzService, useClass: QuizzWebService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

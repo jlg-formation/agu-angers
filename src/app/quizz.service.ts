@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Quizz } from './quizz';
 import { QuizzProgress } from './quizz-progress';
+import { HttpClient } from '@angular/common/http';
 
 const CURRENT = 'current';
 const QUIZZ_LIST = 'quizz-list';
@@ -14,7 +15,7 @@ export class QuizzService {
   list: any;
   progress: QuizzProgress;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.retrieveLocal();
     this.retrieveList();
   }
