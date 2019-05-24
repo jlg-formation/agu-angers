@@ -15,7 +15,7 @@ export class QuizzService {
   list: any;
   progress: QuizzProgress;
 
-  constructor(private http: HttpClient) {
+  constructor(protected http: HttpClient) {
     this.retrieveLocal();
     this.retrieveList();
   }
@@ -40,6 +40,7 @@ export class QuizzService {
   }
 
   retrieveList() {
+    console.log('parent retrieveList');
     const quizz = JSON.parse(localStorage.getItem(QUIZZ_LIST));
     if (!quizz) {
       this.list = {};
@@ -52,8 +53,11 @@ export class QuizzService {
     this.list = quizz;
   }
 
-  save() {
+  addCurrentQuizz() {
     this.list[this.currentQuizz.name] = this.currentQuizz;
+  }
+
+  save() {
     localStorage.setItem(QUIZZ_LIST, JSON.stringify(this.list));
   }
 

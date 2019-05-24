@@ -8,7 +8,7 @@ import { Quizz } from './quizz';
 })
 export class QuizzWebService extends QuizzService {
 
-  constructor(private http: HttpClient) {
+  constructor(http: HttpClient) {
     super(http);
     this.list = [];
   }
@@ -31,6 +31,7 @@ export class QuizzWebService extends QuizzService {
           data[p].__proto__ = Quizz.prototype;
         }
         this.list = data;
+        console.log('this.list', this.list);
         super.save();
       },
       error: e => console.error('error', e)

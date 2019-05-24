@@ -20,6 +20,7 @@ export class QuestionsComponent implements OnInit {
 
   save() {
     console.log('save');
+    this.quizz.addCurrentQuizz();
     this.quizz.save();
     this.router.navigateByUrl('/saved');
   }
