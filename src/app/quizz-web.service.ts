@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { QuizzService } from './quizz.service';
 import { Quizz } from './quizz';
@@ -8,9 +8,10 @@ import { Quizz } from './quizz';
 })
 export class QuizzWebService extends QuizzService {
 
-  constructor(http: HttpClient) {
-    super(http);
+  constructor(private http: HttpClient) {
+    super();
     this.list = [];
+    this.retrieveHttpList();
   }
 
   save() {
@@ -21,7 +22,7 @@ export class QuizzWebService extends QuizzService {
     });
   }
 
-  retrieveList() {
+  retrieveHttpList() {
     console.log('this.http', this);
     this.http.get('http://localhost:5000/ws/quizzlist').subscribe({
       next: data => {

@@ -15,11 +15,7 @@ import { PlayQuizzModule } from './play-quizz/play-quizz.module';
 import { NotFoundModule } from './not-found/not-found.module';
 import { QuizzService } from './quizz.service';
 import { QuizzWebService } from './quizz-web.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-
-let factory = (http: HttpClient) => {
-  return new QuizzWebService(http);
-};
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +37,6 @@ let factory = (http: HttpClient) => {
     NotFoundModule
   ],
   providers: [
-
     { provide: QuizzService, useClass: QuizzWebService }],
   bootstrap: [AppComponent]
 })
